@@ -7,10 +7,13 @@ use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetPassword;
 use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetDate;
 use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetMail;
 use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetSubmit;
-use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetURL;
-use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetTel;
-use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetNumber;
-use FormFramework\Classes\Widget\WidgetList\WidgetList;
+//use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetURL;
+//use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetTel;
+//use FormFramework\Classes\Widget\WidgetText\WidgetTextConcret\WidgetNumber;
+use FormFramework\Classes\Widget\WidgetList\WidgetListConcret\WidgetListSimple;
+use FormFramework\Classes\Widget\WidgetList\WidgetListConcret\WidgetListMultiple;
+use FormFramework\Classes\Widget\WidgetList\WidgetListConcret\WidgetListRadio;
+use FormFramework\Classes\Widget\WidgetList\WidgetListConcret\WidgetListCheck;
 
 // Fonction d'autoloading
 spl_autoload_register(function ($class) {
@@ -66,10 +69,13 @@ and open the template in the editor.
         $form->add_Widget(new WidgetPassword("Mot de passe :", "mdp"));
         $form->add_Widget(new WidgetDate("Date :", "date"));
         $form->add_Widget(new WidgetMail("Adresse mail :", "mail"));
-        $form->add_Widget(new WidgetList("Liste bidon :", "list", array("1element", "2elements")));
         //$form->add_Widget(new WidgetURL("Site internet :", "url"));
         //$form->add_Widget(new WidgetTel("Telephone :", "tel"));
         //$form->add_Widget(new WidgetNumber("Nombre :", "num"));
+        $form->add_Widget(new WidgetListSimple("Liste simple :", "liste_simple", array("toto", "tata")));
+        $form->add_Widget(new WidgetListMultiple("Liste multiple :", "liste_multiple", array("toto", "tata")));
+        $form->add_Widget(new WidgetListRadio("Radiobox :", "myradio", array("toto", "tata")));
+        $form->add_Widget(new WidgetListCheck("Checkbox :", "mycheck", array("toto", "tata")));
         $form->add_Widget(new WidgetSubmit("Envoyer", "submit"));
 
         if (!empty($_POST)) {

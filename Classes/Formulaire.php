@@ -50,6 +50,7 @@ class Formulaire {
     
     // en mode test
     function showTest(){
-        var_dump($this->arrayWidget);
+        //var_dump($this->arrayWidget);
+        var_dump($_POST);
     }
 }

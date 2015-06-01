@@ -16,25 +16,11 @@ use FormFramework\Classes\Widget\Widget;
  */
 class WidgetList extends Widget{
     
-    protected $inputType = "list";
+    protected $inputType = "liste";
     protected $arrayList;
     
     function __construct($labelName, $inputName, $arrayList) {
         parent::__construct($labelName, $inputName);
         $this->arrayList = $arrayList;
-    }
-            
-    function render(){
-        $render = "<label>" . $this->labelName . "</label><select>";
-        foreach ($this->arrayList as $key => $value){
-            $render .= "<option>" . $value . "</option>";
-        }
-        $render .= "</select><br /><br />";
-        return $render;
-    }
-    
-    function bind($value){
-        // A MODIFIER --> NE MARCHE PAS
-        $this->value = $this->arrayList[$key];
     }
 }
