@@ -34,6 +34,7 @@ class WidgetList extends Widget{
     }
     
     function bind($value){
+        // A MODIFIER --> NE MARCHE PAS
         $this->value = $this->arrayList[$key];
     }
 }
