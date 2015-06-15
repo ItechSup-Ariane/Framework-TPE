@@ -29,4 +29,6 @@ class WidgetListMultiple extends WidgetList {
         $render .= '</select><br /><br />';
         return $render;
     }
+    
+    // Nouveau render selon l'affichage : avant choix et apres choix
 }
