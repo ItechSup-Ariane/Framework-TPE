@@ -19,11 +19,11 @@ class WidgetText extends Widget{
     
     protected $inputType = "text";
     
-    function __construct($labelName, $inputName) {
+    public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }
     
-    function render(){
+    public function render(){
         $render = '<label>' . $this->labelName . '</label><br />'
                 . '<input type="' . $this->inputType . '" name="' . $this->inputName;
 
@@ -36,7 +36,7 @@ class WidgetText extends Widget{
         return $render;
     }
     
-    function createValidator(){
+    public function createValidator(){
         $valid = new ValidatorText($this->value);
         $response = $valid->validate();
         return $response;

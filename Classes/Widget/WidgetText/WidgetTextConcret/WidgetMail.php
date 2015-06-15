@@ -18,7 +18,7 @@ class WidgetMail extends WidgetText{
     
     protected $inputType = "email";
     
-    function __construct($labelName, $inputName) {
+    public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }
 }

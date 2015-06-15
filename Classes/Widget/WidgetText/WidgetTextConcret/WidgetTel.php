@@ -17,7 +17,7 @@ use FormFramework\Classes\Widget\WidgetText\WidgetText;
 class WidgetTel extends WidgetText{
     protected $inputType = "tel";
     
-    function __construct($labelName, $inputName) {
+    public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }
 }

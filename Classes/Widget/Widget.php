@@ -20,16 +20,16 @@ abstract class Widget {
     protected $inputName;
     protected $value = null;
             
-    function __construct($labelName, $inputName){
+    public function __construct($labelName, $inputName){
         $this->labelName = $labelName;
         $this->inputName = $inputName;
     }
     
-    function bind($value){
+    public function bind($value){
         $this->value = $value;
     }
     
-    function getName(){
+    public function getName(){
         return $this->inputName;
     }
 }

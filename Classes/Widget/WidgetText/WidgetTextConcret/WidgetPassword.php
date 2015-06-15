@@ -18,7 +18,7 @@ class WidgetPassword extends WidgetText{
     
     protected $inputType = "password";
     
-    function __construct($labelName, $inputName) {
+    public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }
 }

@@ -17,11 +17,11 @@ class ValidatorText {
     
     protected $value;
     
-    function __construct($value) {
+    public function __construct($value) {
         $this->value = $value;
     }
     
-    function validate(){
+    public function validate(){
         // utiliser des expressions régulières et un try catch
         if (is_string($this->value)){
             return 0;

@@ -18,7 +18,7 @@ class WidgetDate extends WidgetText{
     
     protected $inputType = "date";
     
-    function __construct($labelName, $inputName) {
+    public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }
 }

@@ -20,7 +20,7 @@ class WidgetList extends Widget{
     protected $arrayList;
     
     // on attend toujours un label, un nom, et maintenant un tableau contenant les éléments de la liste :
-    function __construct($labelName, $inputName, $arrayList) {
+    public function __construct($labelName, $inputName, $arrayList) {
         parent::__construct($labelName, $inputName);
         $this->arrayList = $arrayList;
     }

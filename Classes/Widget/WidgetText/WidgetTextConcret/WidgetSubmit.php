@@ -18,11 +18,11 @@ class WidgetSubmit extends WidgetText {
     
     protected $inputType = "submit";
     
-    function __construct($labelName, $inputName) {
+    public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }
     
-    function render() {
+    public function render() {
         // chaîne de caractères à retourner
         return '<input type="' . $this->inputType . '" name="' . $this->inputName . '" value="' . $this->labelName . '"/><br /><br />';
     }

@@ -20,17 +20,17 @@ class Formulaire {
     private $name;
     private $arrayWidget;
     
-    function __construct($methodForm, $actionForm, $nameForm) {
+    public function __construct($methodForm, $actionForm, $nameForm) {
         $this->method = $methodForm;
         $this->action = $actionForm;
         $this->name = $nameForm;
     }
     
-    function add_Widget($widget){
+    public function add_Widget($widget){
         $this->arrayWidget[$widget->getName()] = $widget;
     }
     
-    function render(){
+    public function render(){
         $return = '<h1>' . $this->name . '</h1>';
         $return .= '<form method="' . $this->method . '" action="' . $this->action . '" name="' . $this->name . '">';
         foreach ($this->arrayWidget as $key => $value) {
@@ -41,7 +41,7 @@ class Formulaire {
     }
     
     // methode bind tabl de valeurs recues à associer aux widgets
-    function bind($arrayValue){
+    public function bind($arrayValue){
         foreach($arrayValue as $key => $value){
             // IL FAUDRAIT CREER UN VALIDATOR ICI ET BINDER UNIQUEMENT SI C'EST CORRECT !!!
             $this->arrayWidget[$key]->bind($value);
@@ -49,7 +49,7 @@ class Formulaire {
     }
     
     // en mode test
-    function showTest(){
+    public function showTest(){
         var_dump($this->arrayWidget);
         //var_dump($_POST);
     }

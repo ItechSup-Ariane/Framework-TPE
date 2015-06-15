@@ -16,11 +16,11 @@ use FormFramework\Classes\Widget\WidgetList\WidgetList;
  */
 class WidgetListMultiple extends WidgetList {
     
-    function __construct($labelName, $inputName, $arrayList) {
+    public function __construct($labelName, $inputName, $arrayList) {
         parent::__construct($labelName, $inputName, $arrayList);
     }
     
-    function render(){
+    public function render(){
         $render = '<label>' . $this->labelName . '</label><br />';
         $render .= '<select multiple="multiple" name="' . $this->inputName . '[]">';
         foreach ($this->arrayList as $key => $value){

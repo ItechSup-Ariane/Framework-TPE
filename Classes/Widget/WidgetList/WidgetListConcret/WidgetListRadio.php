@@ -18,11 +18,11 @@ class WidgetListRadio extends WidgetList {
     
     protected $inputType = "radio";
     
-    function __construct($labelName, $inputName, $arrayList) {
+    public function __construct($labelName, $inputName, $arrayList) {
         parent::__construct($labelName, $inputName, $arrayList);
     }
     
-    function render(){
+    public function render(){
         $render = '<label>' . $this->labelName . '</label><br />';
         foreach ($this->arrayList as $key => $value){
             $render .= '<input type="' . $this->inputType . '" name="' . $this->inputName . '" '

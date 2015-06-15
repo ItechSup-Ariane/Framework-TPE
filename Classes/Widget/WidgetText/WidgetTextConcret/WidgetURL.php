@@ -17,7 +17,7 @@ use FormFramework\Classes\Widget\WidgetText\WidgetText;
 class WidgetURL extends WidgetText{
     protected $inputType = "url";
     
-    function __construct($labelName, $inputName) {
+    public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }
 }
