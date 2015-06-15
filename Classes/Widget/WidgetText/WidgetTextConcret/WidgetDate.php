@@ -10,14 +10,21 @@ use FormFramework\Classes\Widget\WidgetText\WidgetText;
  */
 
 /**
- * Description of date
+ * Class WidgetDate
  *
- * @author Thomas
+ * <ul>
+ * <li>@var protected $inputType: widget type</li>
+ * </ul>
  */
 class WidgetDate extends WidgetText{
     
     protected $inputType = "date";
     
+    /**
+     * __function construct
+     * @param type $labelName
+     * @param type $inputName
+     */
     public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }

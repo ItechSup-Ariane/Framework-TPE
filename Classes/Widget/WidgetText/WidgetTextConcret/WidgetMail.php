@@ -10,14 +10,21 @@ use FormFramework\Classes\Widget\WidgetText\WidgetText;
  */
 
 /**
- * Description of mail
+ * Class WidgetMail
  *
- * @author Thomas
+ * <ul>
+ * <li>@var protected $inputType: widget type</li>
+ * </ul>
  */
 class WidgetMail extends WidgetText{
     
     protected $inputType = "email";
     
+    /**
+     * __construct function
+     * @param type $labelName
+     * @param type $inputName
+     */
     public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }

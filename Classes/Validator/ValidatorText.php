@@ -9,18 +9,28 @@
 namespace FormFramework\Classes\Validator;
 
 /**
- * Description of ValidateText
+ * Class ValidatorText
  *
- * @author Thomas
+ * <ul>
+ * <li>@var protected $value : value to check and validate if correct</li>
+ * </ul>
  */
 class ValidatorText {
     
     protected $value;
     
+    /**
+     * __construct function
+     * @param type $value
+     */
     public function __construct($value) {
         $this->value = $value;
     }
     
+    /**
+     * validate function
+     * @return int
+     */
     public function validate(){
         // utiliser des expressions régulières et un try catch
         if (is_string($this->value)){

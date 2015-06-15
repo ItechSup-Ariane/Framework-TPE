@@ -10,14 +10,21 @@ use FormFramework\Classes\Widget\WidgetText\WidgetText;
  */
 
 /**
- * Description of password
+ * Class WidgetPassword
  *
- * @author Thomas
+ * <ul>
+ * <li>@var protected $inputType: widget type</li>
+ * </ul>
  */
 class WidgetPassword extends WidgetText{
     
     protected $inputType = "password";
     
+    /**
+     * __construct function
+     * @param type $labelName
+     * @param type $inputName
+     */
     public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }

@@ -10,13 +10,20 @@ namespace FormFramework\Classes\Widget\WidgetText\WidgetTextConcret;
 use FormFramework\Classes\Widget\WidgetText\WidgetText;
 
 /**
- * Description of WidgetURL
+ * Class WidgetURL
  *
- * @author Thomas
+ * <ul>
+ * <li>@var protected $inputType: widget type</li>
+ * </ul>
  */
 class WidgetURL extends WidgetText{
     protected $inputType = "url";
     
+    /**
+     * __construct function
+     * @param type $labelName
+     * @param type $inputName
+     */
     public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }

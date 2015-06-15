@@ -11,18 +11,29 @@ use FormFramework\Classes\Validator\ValidatorText;
  */
 
 /**
- * Description of text
+ * Class WidgetText
  *
- * @author Thomas
+ * <ul>
+ * <li>@var protected $inputType: widget type</li>
+ * </ul>
  */
 class WidgetText extends Widget{
     
     protected $inputType = "text";
     
+    /**
+     * __construct function
+     * @param type $labelName
+     * @param type $inputName
+     */
     public function __construct($labelName, $inputName) {
         parent::__construct($labelName, $inputName);
     }
     
+    /**
+     * render function
+     * @return string
+     */
     public function render(){
         $render = '<label>' . $this->labelName . '</label><br />'
                 . '<input type="' . $this->inputType . '" name="' . $this->inputName;
@@ -36,6 +47,10 @@ class WidgetText extends Widget{
         return $render;
     }
     
+    /**
+     * createValidator function
+     * @return type
+     */
     public function createValidator(){
         $valid = new ValidatorText($this->value);
         $response = $valid->validate();

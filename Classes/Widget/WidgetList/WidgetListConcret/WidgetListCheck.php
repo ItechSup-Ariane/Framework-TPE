@@ -10,18 +10,30 @@ namespace FormFramework\Classes\Widget\WidgetList\WidgetListConcret;
 use FormFramework\Classes\Widget\WidgetList\WidgetList;
 
 /**
- * Description of WidgetListCheck
+ * Class WidgetListCheck
  *
- * @author Thomas
+ * <ul>
+ * <li>@var protected $inputType: list type (radio, check, simple, multiple)</li>
+ * </ul>
  */
 class WidgetListCheck extends WidgetList{
     
     protected $inputType = "checkbox";
     
+    /**
+     * __construct function
+     * @param type $labelName
+     * @param type $inputName
+     * @param type $arrayList
+     */
     public function __construct($labelName, $inputName, $arrayList) {
         parent::__construct($labelName, $inputName, $arrayList);
     }
     
+    /**
+     * render function
+     * @return string
+     */
     public function render(){
         $render = '<label>' . $this->labelName . '</label><br />';
         foreach ($this->arrayList as $key => $value){

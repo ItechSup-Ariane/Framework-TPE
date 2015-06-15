@@ -10,16 +10,24 @@ namespace FormFramework\Classes\Widget\WidgetList;
 use FormFramework\Classes\Widget\Widget;
 
 /**
- * Description of WidgetList
+ * Class WidgetList
  *
- * @author Thomas
+ * <ul>
+ * <li>@var protected $inputType: list type (radio, check, simple, multiple)</li>
+ * <li>@var protected $arrayList: list of input values which fill the list</li>
+ * </ul>
  */
 class WidgetList extends Widget{
     
     protected $inputType = "liste";
     protected $arrayList;
     
-    // on attend toujours un label, un nom, et maintenant un tableau contenant les éléments de la liste :
+    /**
+     * __construct function
+     * @param type $labelName
+     * @param type $inputName
+     * @param type $arrayList
+     */
     public function __construct($labelName, $inputName, $arrayList) {
         parent::__construct($labelName, $inputName);
         $this->arrayList = $arrayList;
